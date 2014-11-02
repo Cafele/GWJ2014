@@ -15,6 +15,8 @@ public class cameraController : MonoBehaviour {
 
     private Transform thisTransform; // camera Transform
     private Vector3 lastPos = Vector3.zero;
+
+    public Transform target;
     // Use this for initialization
     void Start()
     {
@@ -24,16 +26,20 @@ public class cameraController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (cameraTarget.transform.position.y < lastPos.y)
+        Vector3 pos = cameraTarget.transform.position;
+        if (target.position.y > pos.y)
+            pos = target.position;
+        if (pos.y < lastPos.y )
             return;
-        lastPos = cameraTarget.transform.position;
+        //prueba de camara subiendo
+        lastPos = pos;
         if (cameraFollowX)
         {
-            thisTransform.position = new Vector3(Mathf.SmoothDamp(thisTransform.position.x, lastPos.x, ref velocity.x, smoothTime), thisTransform.position.y, thisTransform.position.z);
+            thisTransform.position = new Vector3(Mathf.SmoothDamp(thisTransform.position.x, pos.x, ref velocity.x, smoothTime), thisTransform.position.y, thisTransform.position.z);
         }
         if (cameraFollowY)
         {
-            thisTransform.position = new Vector3(thisTransform.position.x, Mathf.SmoothDamp(thisTransform.position.y, lastPos.y, ref velocity.y, smoothTime), thisTransform.position.z);
+            thisTransform.position = new Vector3(thisTransform.position.x, Mathf.SmoothDamp(thisTransform.position.y, pos.y, ref velocity.y, smoothTime), thisTransform.position.z);
         }
     }
 }
