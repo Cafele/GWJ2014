@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100002}
-  - 61: {fileID: 6100000}
+  - 114: {fileID: 11400000}
   m_Layer: 8
   m_Name: trampolin
   m_TagString: Untagged
@@ -41,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .211547852, y: -5.2389245, z: 0}
-  m_LocalScale: {x: 4.15488243, y: 4.15488243, z: 1}
+  m_LocalPosition: {x: 10.1222734, y: 28.0893097, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 0}
@@ -59,17 +59,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
---- !u!61 &6100000
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 4.82999992, y: .300000012}
-  m_Center: {x: 0, y: .200000003}
 --- !u!61 &6100002
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -92,6 +81,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .879999995, y: 1}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumps: 2147483647
+  consumo: 10
+  jumpPower: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

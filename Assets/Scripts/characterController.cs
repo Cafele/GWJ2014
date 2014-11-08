@@ -26,8 +26,25 @@ public class characterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (gordura <= 0f)
+        {
+            Debug.Log("sin calorias para saltar");
+            return;
+        }
+        if (canJump)
+        {
 
+            //Debug.Log("salto"+jumpMultiplier * jumpForce);
+            gordura -= consumo;
+            //rigidbody2D.AddForce(Vector3.zero);
+            Vector2 a = rigidbody2D.velocity;
+            a.y = 0f;
+            rigidbody2D.velocity = a;
+            rigidbody2D.AddForce(transform.up * jumpMultiplier * jumpForce);
+
+            barra.setValue(gordura);
+            canJump = false;
+        }
 	}
 
     // Called every same time. Not need to use Time.deltatime
@@ -38,19 +55,7 @@ public class characterController : MonoBehaviour {
         //jumping
         //canJump = Physics2D.OverlapCircle(groundCheck.position, checkRadius, trampolineLayer);
         //si puede saltar, se aplica una fuerza hacia arriba 
-        if(gordura <=0f)
-        {
-            Debug.Log("sin calorias para saltar");
-            return;
-        }
-        if (canJump)
-        {
-            //Debug.Log("salto");
-            gordura -= consumo;
-            rigidbody2D.AddForce(transform.up * jumpMultiplier * jumpForce);
-            canJump = false;
-            barra.setValue(gordura);
-        }
+        
         
 
 
@@ -71,54 +76,44 @@ public class characterController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.gameObject.tag == "candy")
+        //codigo cavernicola mejorar si la idea queda
+        //deteccion de salto
+        Debug.Log(obj.gameObject.tag);
+        if (obj.gameObject.tag == "trampoline" && !canJump)
+        {
+            status stat = obj.gameObject.GetComponentInParent<status>();
+            if (stat == null)
+                return;
+            //si toca un trampoline se revisa la gordura
+            if (gordura > 100f || stat.jumps == 0)
+            {
+                //si el objeto excede el limite de gordura o el trampolin no tiene mas saltos se elimina el trampoline
+                //Debug.Log("entro aca");
+                Destroy(obj.transform.parent.gameObject);
+            }
+            else
+            {
+                //Debug.Log("salto");
+                //si no excede el limite, se setea que puede saltar
+                stat.jumps -= 1;
+                consumo = stat.consumo;
+                jumpForce = stat.jumpPower;
+                canJump = true;
+            }
+
+        }
+        else if (obj.gameObject.tag == "candy")
         {
             Debug.Log("caramelo");
             energia energy = obj.gameObject.GetComponent<energia>();
             gordura += energy.calorias;
-            Destroy(obj.transform.gameObject);
-            barra.setValue(gordura);
-        } 
+            Destroy(obj.gameObject);
+            Debug.Log("destruir: " + obj.gameObject.tag);
+        }
     }
     void OnCollisionEnter2D(Collision2D obj)
     {
-        //codigo cavernicola mejorar si la idea queda
-        //deteccion de salto
-        if (obj.gameObject.tag == "trampoline")
-        {
-            status stat = obj.gameObject.GetComponentInParent<status>();
-            //if (stat == null)
-            //    return;
-            //Debug.Log("toco trampolin");
-            //si toca un trampoline se revisa la gordura
-                if (gordura > 100f || stat.jumps==0)
-                {
-                    //Debug.Log("rompio el piso");
-                    //si el objeto excede el limite de gordura o el trampolin no tiene mas saltos se elimina el trampoline
-                    Destroy(obj.transform.root.gameObject);
-                }
-                else
-                {
-                    //Debug.Log("salto");
-                    //si no excede el limite, se setea que puede saltar
-                    stat.jumps -= 1;
-                    consumo = stat.consumo;
-                    jumpForce = stat.jumpPower;
-                    canJump = true;
-                }
-            
-        }
-        else if(obj.gameObject.tag == "fragil")
-        {
-            //si colisiona con un trampoline fragil se elimina el trampoline
-            Destroy(obj.transform.root.gameObject);
-        }
-        /*else if (obj.gameObject.tag == "candy")
-        {
-            Debug.Log("caramelo");
-            energia energy = obj.gameObject.GetComponent<energia>();
-            gordura += energy.calorias;
-            Destroy(obj.transform.root.gameObject);
-        }*/
+        
+        
     }
 }
