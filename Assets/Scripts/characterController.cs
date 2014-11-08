@@ -26,6 +26,17 @@ public class characterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
+	}
+
+    // Called every same time. Not need to use Time.deltatime
+    void FixedUpdate() {
+        //movimiento horizontal del caracter
+        rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") * maxHorizontalSpeed, rigidbody2D.velocity.y);
+
+        //jumping
+        //canJump = Physics2D.OverlapCircle(groundCheck.position, checkRadius, trampolineLayer);
+        //si puede saltar, se aplica una fuerza hacia arriba 
         if (gordura <= 0f)
         {
             Debug.Log("sin calorias para saltar");
@@ -40,22 +51,12 @@ public class characterController : MonoBehaviour {
             Vector2 a = rigidbody2D.velocity;
             a.y = 0f;
             rigidbody2D.velocity = a;
+
             rigidbody2D.AddForce(transform.up * jumpMultiplier * jumpForce);
 
             barra.setValue(gordura);
             canJump = false;
         }
-	}
-
-    // Called every same time. Not need to use Time.deltatime
-    void FixedUpdate() {
-        //movimiento horizontal del caracter
-        rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") * maxHorizontalSpeed, rigidbody2D.velocity.y);
-
-        //jumping
-        //canJump = Physics2D.OverlapCircle(groundCheck.position, checkRadius, trampolineLayer);
-        //si puede saltar, se aplica una fuerza hacia arriba 
-        
         
 
 
@@ -107,6 +108,7 @@ public class characterController : MonoBehaviour {
             Debug.Log("caramelo");
             energia energy = obj.gameObject.GetComponent<energia>();
             gordura += energy.calorias;
+            barra.setValue(gordura);
             Destroy(obj.gameObject);
             Debug.Log("destruir: " + obj.gameObject.tag);
         }
