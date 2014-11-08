@@ -79,7 +79,7 @@ public class characterController : MonoBehaviour {
     {
         //codigo cavernicola mejorar si la idea queda
         //deteccion de salto
-        Debug.Log(obj.gameObject.tag);
+        //Debug.Log(obj.gameObject.tag);
         if (obj.gameObject.tag == "trampoline" && !canJump)
         {
             status stat = obj.gameObject.GetComponentInParent<status>();
