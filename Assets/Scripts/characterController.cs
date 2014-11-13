@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class characterController : MonoBehaviour {
-
+    public GameObject menu;
     //velocidad maxima de movimiento horizontal
     public float maxHorizontalSpeed = 10f;
     //fuerza de salto
@@ -19,14 +19,22 @@ public class characterController : MonoBehaviour {
     private float consumo = 0f;
     private float jumpForce = 1f;
     private barController barra;
+    private bool paused = false;
 	// Use this for initialization
 	void Start () {
+        Time.timeScale =1f;
         barra = GetComponentInChildren<barController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("pause");
+            menu.SetActive(true);
+            Time.timeScale = 0f;
+            transform.root.gameObject.SetActive(false);
+        }
 	}
 
     // Called every same time. Not need to use Time.deltatime
@@ -77,6 +85,7 @@ public class characterController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D obj)
     {
+        
         //codigo cavernicola mejorar si la idea queda
         //deteccion de salto
         //Debug.Log(obj.gameObject.tag);
