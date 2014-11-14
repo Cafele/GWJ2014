@@ -3,6 +3,7 @@ using System.Collections;
 
 public class audioController : MonoBehaviour {
     public Transform pos;
+    public Camera GUICamera;
     public float sliderWidth = 200f;
     Vector3 screenPos;
 	// Use this for initialization
@@ -10,7 +11,7 @@ public class audioController : MonoBehaviour {
     public GUISkin skin;
 	void Start () {
         audioMgr = audioManager.GetInstance();
-        screenPos = Camera.main.WorldToScreenPoint(pos.position);
+        screenPos = GUICamera.WorldToScreenPoint(pos.position);
 	}
 	
 	// Update is called once per frame

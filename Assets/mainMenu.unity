@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 23805384}
+  GUICamera: {fileID: 769169999}
   sliderWidth: 200
   skin: {fileID: 11400000, guid: ba44350557b418047b2da7567f225cf3, type: 2}
 --- !u!102 &45592633
@@ -560,7 +561,7 @@ MonoBehaviour:
   rotate: 1
   mainMenu: {fileID: 1579267002}
   options: {fileID: 2146873942}
-  gameObjects: {fileID: 0}
+  GUICamera: {fileID: 0}
 --- !u!102 &435265931
 TextMesh:
   serializedVersion: 3
@@ -669,7 +670,7 @@ MonoBehaviour:
   rotate: 1
   mainMenu: {fileID: 1579267002}
   options: {fileID: 2146873942}
-  gameObjects: {fileID: 0}
+  GUICamera: {fileID: 0}
 --- !u!102 &502780610
 TextMesh:
   serializedVersion: 3
@@ -921,7 +922,7 @@ MonoBehaviour:
   rotate: 1
   mainMenu: {fileID: 1579267002}
   options: {fileID: 2146873942}
-  gameObjects: {fileID: 0}
+  GUICamera: {fileID: 0}
 --- !u!102 &667227477
 TextMesh:
   serializedVersion: 3
@@ -1217,7 +1218,7 @@ Transform:
   m_PrefabInternal: {fileID: 1739502221}
   m_GameObject: {fileID: 1279192962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0300797131, y: -.96925652, z: 1.62841797}
+  m_LocalPosition: {x: 0, y: -1, z: 1.60000002}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1579267003}
@@ -1321,7 +1322,7 @@ MonoBehaviour:
   rotate: 1
   mainMenu: {fileID: 1579267002}
   options: {fileID: 2146873942}
-  gameObjects: {fileID: 0}
+  GUICamera: {fileID: 0}
 --- !u!61 &1399021367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1591,15 +1592,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400020, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .0300797131
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.96925652
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.62841797
+      value: 1.60000002
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1633,7 +1634,28 @@ Prefab:
       propertyPath: buttonType
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100036, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
+      propertyPath: GUICamera
+      value: 
+      objectReference: {fileID: 769169999}
+    - target: {fileID: 100030, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
+      propertyPath: m_Name
+      value: BACK TO MENU text
+      objectReference: {fileID: 0}
+    - target: {fileID: 10200022, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
+      propertyPath: m_Text
+      value: BACK TO MENU
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6100020, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7bfe87c84d72e4f4d84e42a3842e10ef, type: 2}
   m_RootGameObject: {fileID: 1279192962}
   m_IsPrefabParent: 0
@@ -1651,7 +1673,7 @@ GameObject:
   - 114: {fileID: 2032977369}
   - 61: {fileID: 2032977370}
   m_Layer: 5
-  m_Name: Main Menu text
+  m_Name: BACK TO MENU text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1677,7 +1699,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1739502221}
   m_GameObject: {fileID: 2032977365}
-  m_Text: MAIN MENU
+  m_Text: BACK TO MENU
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1734,18 +1756,17 @@ MonoBehaviour:
   rotate: 0
   mainMenu: {fileID: 1579267002}
   options: {fileID: 2146873942}
-  gameObjects: {fileID: 0}
+  GUICamera: {fileID: 0}
 --- !u!61 &2032977370
 BoxCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100020, guid: 7bfe87c84d72e4f4d84e42a3842e10ef,
-    type: 2}
-  m_PrefabInternal: {fileID: 1739502221}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032977365}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 73.8000031, y: 13.3710947}
+  m_IsTrigger: 0
+  m_Size: {x: 93.8000031, y: 13.3710947}
   m_Center: {x: 0, y: -9.96224188e-08}
 --- !u!1 &2086137467
 GameObject:
@@ -1915,7 +1936,7 @@ MonoBehaviour:
   rotate: 1
   mainMenu: {fileID: 1579267002}
   options: {fileID: 2146873942}
-  gameObjects: {fileID: 0}
+  GUICamera: {fileID: 0}
 --- !u!61 &2131485030
 BoxCollider2D:
   m_ObjectHideFlags: 0

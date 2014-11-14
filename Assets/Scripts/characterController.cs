@@ -2,7 +2,12 @@
 using System.Collections;
 
 public class characterController : MonoBehaviour {
-    public GameObject menu;
+    public GameObject GUICamera;
+    public Transform deathMenu;
+    public Transform menu;
+    private int jumps = 0;
+    private int candy = 0;
+    private float time = 0f;
     //velocidad maxima de movimiento horizontal
     public float maxHorizontalSpeed = 10f;
     //fuerza de salto
@@ -24,16 +29,22 @@ public class characterController : MonoBehaviour {
 	void Start () {
         Time.timeScale =1f;
         barra = GetComponentInChildren<barController>();
+        jumps = 0;
+        candy = 0;
+        time = 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        time += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("pause");
-            menu.SetActive(true);
-            Time.timeScale = 0f;
-            transform.root.gameObject.SetActive(false);
+            pause();
+            //transform.root.gameObject.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            dead();
         }
 	}
 
@@ -64,6 +75,7 @@ public class characterController : MonoBehaviour {
 
             barra.setValue(gordura);
             canJump = false;
+            jumps++;
         }
         
 
@@ -114,6 +126,7 @@ public class characterController : MonoBehaviour {
         }
         else if (obj.gameObject.tag == "candy")
         {
+            candy++;
             Debug.Log("caramelo");
             energia energy = obj.gameObject.GetComponent<energia>();
             gordura += energy.calorias;
@@ -126,5 +139,25 @@ public class characterController : MonoBehaviour {
     {
         
         
+    }
+
+    void dead()
+    {
+        menu.gameObject.SetActive(false);
+        deathMenu.gameObject.SetActive(true);
+        GUICamera.SetActive(true);
+        Time.timeScale = 0f;
+        deathMenu.FindChild("jumps Text").GetComponent<TextMesh>().text = "Jumps: "+jumps;
+        deathMenu.FindChild("candy Text").GetComponent<TextMesh>().text = "Candy: " + candy;
+        deathMenu.FindChild("time Text").GetComponent<TextMesh>().text = "Time: " + time.ToString("F2") + " seconds";
+    }
+
+    void pause()
+    {
+        Debug.Log("pause");
+        menu.gameObject.SetActive(true);
+        deathMenu.gameObject.SetActive(false);
+        GUICamera.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

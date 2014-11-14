@@ -13,7 +13,7 @@ public class menuController : MonoBehaviour {
     public bool rotate = true;
     public GameObject mainMenu;
     public GameObject options;
-    public GameObject gameObjects;
+    public GameObject GUICamera;
    // public float hSliderValue = 0f;
     audioManager audioMgr;
     public enum menuOption
@@ -87,8 +87,8 @@ public class menuController : MonoBehaviour {
                 break;
             case menuOption.Resume :
                 Time.timeScale = 1f;
-                transform.root.gameObject.SetActive(false);
-                gameObjects.SetActive(true);
+                //transform.root.gameObject.SetActive(false);
+                GUICamera.SetActive(false);
                 break;
             default :
                 break;
