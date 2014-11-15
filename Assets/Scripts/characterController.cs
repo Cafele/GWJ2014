@@ -111,6 +111,7 @@ public class characterController : MonoBehaviour {
             {
                 //si el objeto excede el limite de gordura o el trampolin no tiene mas saltos se elimina el trampoline
                 //Debug.Log("entro aca");
+                //dead();
                 Destroy(obj.transform.parent.gameObject);
             }
             else
@@ -133,6 +134,10 @@ public class characterController : MonoBehaviour {
             barra.setValue(gordura);
             Destroy(obj.gameObject);
             Debug.Log("destruir: " + obj.gameObject.tag);
+        }
+        else if (obj.gameObject.tag == "enemy")
+        {
+            dead();
         }
     }
     void OnCollisionEnter2D(Collision2D obj)

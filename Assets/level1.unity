@@ -135,13 +135,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
       propertyPath: jumps
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 1778552104}
   m_IsPrefabParent: 0
@@ -1140,7 +1141,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
       propertyPath: jumps
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
       propertyPath: consumo
@@ -1154,7 +1155,8 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 1207372753}
   m_IsPrefabParent: 0
@@ -3671,8 +3673,6 @@ GameObject:
   - 212: {fileID: 739665454}
   - 61: {fileID: 739665453}
   - 114: {fileID: 739665452}
-  - 114: {fileID: 739665456}
-  - 114: {fileID: 739665455}
   m_Layer: 8
   m_Name: trampolin
   m_TagString: Untagged
@@ -3743,35 +3743,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 689cb6e64511a50449f9577ccc4a3c17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &739665455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 739665450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
---- !u!114 &739665456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 1108751882}
-  m_GameObject: {fileID: 739665450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
 --- !u!1001 &745572389
 Prefab:
   m_ObjectHideFlags: 0
@@ -3839,7 +3810,8 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 1189342512}
   m_IsPrefabParent: 0
@@ -4389,7 +4361,8 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 1608013839}
   m_IsPrefabParent: 0
@@ -4813,7 +4786,8 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 2005383239}
   m_IsPrefabParent: 0
@@ -4881,7 +4855,8 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 739665450}
   m_IsPrefabParent: 0
@@ -4900,7 +4875,7 @@ GameObject:
   - 61: {fileID: 1144113739}
   m_Layer: 0
   m_Name: obstaculo
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4974,8 +4949,8 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1144113734}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 3070a81be079e484086642e12efd020e, type: 2}
-  m_IsTrigger: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Size: {x: 6.61000013, y: .569999993}
   m_Center: {x: 0, y: 0}
 --- !u!1 &1161111292
@@ -5332,8 +5307,6 @@ GameObject:
   - 212: {fileID: 1189342516}
   - 61: {fileID: 1189342515}
   - 114: {fileID: 1189342514}
-  - 114: {fileID: 1189342519}
-  - 114: {fileID: 1189342517}
   - 114: {fileID: 1189342518}
   m_Layer: 8
   m_Name: trampolin
@@ -5405,20 +5378,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 689cb6e64511a50449f9577ccc4a3c17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1189342517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1189342512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
 --- !u!114 &1189342518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5430,21 +5389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90976a1c084c92444b08d9703a4cbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1189342519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 745572389}
-  m_GameObject: {fileID: 1189342512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
 --- !u!1 &1190818922
 GameObject:
   m_ObjectHideFlags: 0
@@ -5738,7 +5682,6 @@ GameObject:
   - 4: {fileID: 1207372757}
   - 212: {fileID: 1207372756}
   - 61: {fileID: 1207372755}
-  - 114: {fileID: 1207372758}
   - 114: {fileID: 1207372754}
   m_Layer: 8
   m_Name: trampolin
@@ -5810,21 +5753,6 @@ Transform:
   - {fileID: 1317371375}
   m_Father: {fileID: 928408701}
   m_RootOrder: 0
---- !u!114 &1207372758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 267338454}
-  m_GameObject: {fileID: 1207372753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 1
-  consumo: 0
-  jumpPower: 1
 --- !u!1 &1208342411
 GameObject:
   m_ObjectHideFlags: 0
@@ -6063,7 +5991,12 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 1828404133
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11400000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
+      propertyPath: consumo
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 14194f9d4f5263649975b967f5088335, type: 2}
   m_RootGameObject: {fileID: 1438561975}
   m_IsPrefabParent: 0
@@ -6873,37 +6806,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1418958660}
-  - 61: {fileID: 1418958659}
-  - 114: {fileID: 1418958658}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1418958658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1418958657}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31941013a73a0664ba17dfc9deabc39c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1418958659
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1418958657}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 18, y: 1}
-  m_Center: {x: 0, y: -6}
 --- !u!4 &1418958660
 Transform:
   m_ObjectHideFlags: 0
@@ -6911,7 +6820,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1418958657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.92285919, z: 10}
+  m_LocalPosition: {x: 0, y: -11.352211, z: 19.6590614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2115740497}
@@ -6927,8 +6836,6 @@ GameObject:
   - 212: {fileID: 1438561979}
   - 61: {fileID: 1438561978}
   - 114: {fileID: 1438561977}
-  - 114: {fileID: 1438561981}
-  - 114: {fileID: 1438561980}
   m_Layer: 8
   m_Name: trampolin
   m_TagString: Untagged
@@ -6962,7 +6869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumps: 2147483647
-  consumo: 10
+  consumo: 0
   jumpPower: 1
 --- !u!61 &1438561978
 BoxCollider2D:
@@ -6999,35 +6906,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 689cb6e64511a50449f9577ccc4a3c17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1438561980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1438561975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
---- !u!114 &1438561981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 1221176647}
-  m_GameObject: {fileID: 1438561975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
 --- !u!1 &1462311837
 GameObject:
   m_ObjectHideFlags: 0
@@ -7911,7 +7789,6 @@ GameObject:
   - 212: {fileID: 1608013842}
   - 61: {fileID: 1608013841}
   - 114: {fileID: 1608013840}
-  - 114: {fileID: 1608013844}
   m_Layer: 8
   m_Name: trampolin
   m_TagString: Untagged
@@ -7982,21 +7859,6 @@ Transform:
   - {fileID: 1974952837}
   m_Father: {fileID: 928408701}
   m_RootOrder: 4
---- !u!114 &1608013844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 921843916}
-  m_GameObject: {fileID: 1608013839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 1
-  consumo: 0
-  jumpPower: 1
 --- !u!1 &1608335158
 GameObject:
   m_ObjectHideFlags: 0
@@ -8778,8 +8640,6 @@ GameObject:
   - 212: {fileID: 1778552108}
   - 61: {fileID: 1778552107}
   - 114: {fileID: 1778552106}
-  - 114: {fileID: 1778552110}
-  - 114: {fileID: 1778552109}
   m_Layer: 8
   m_Name: trampolin
   m_TagString: Untagged
@@ -8812,7 +8672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumps: 1
+  jumps: 2
   consumo: 10
   jumpPower: 1
 --- !u!61 &1778552107
@@ -8850,35 +8710,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 689cb6e64511a50449f9577ccc4a3c17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1778552109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1778552104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
---- !u!114 &1778552110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 17216906}
-  m_GameObject: {fileID: 1778552104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
 --- !u!1 &1823780358
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,8 +9502,6 @@ GameObject:
   - 212: {fileID: 2005383243}
   - 61: {fileID: 2005383242}
   - 114: {fileID: 2005383241}
-  - 114: {fileID: 2005383245}
-  - 114: {fileID: 2005383244}
   m_Layer: 8
   m_Name: trampolin
   m_TagString: Untagged
@@ -9743,35 +9572,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 689cb6e64511a50449f9577ccc4a3c17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &2005383244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2005383239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
---- !u!114 &2005383245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 14194f9d4f5263649975b967f5088335,
-    type: 2}
-  m_PrefabInternal: {fileID: 1060779587}
-  m_GameObject: {fileID: 2005383239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f063e3ece650747438ca53752d1240a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumps: 2147483647
-  consumo: 0
-  jumpPower: 1
 --- !u!1 &2010602304
 GameObject:
   m_ObjectHideFlags: 0
@@ -10361,9 +10161,10 @@ GameObject:
   - 114: {fileID: 2115740498}
   - 114: {fileID: 2115740499}
   - 114: {fileID: 2115740500}
+  - 61: {fileID: 2115740501}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10408,7 +10209,7 @@ Camera:
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -10428,7 +10229,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2115740492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1418958660}
@@ -10466,7 +10267,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2115740492}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65bfe53174a6af84fa47badf51d2a1d2, type: 3}
   m_Name: 
@@ -10476,6 +10277,17 @@ MonoBehaviour:
   cameraFollowX: 0
   cameraFollowY: 1
   target: {fileID: 2092491556}
+--- !u!61 &2115740501
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115740492}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 40, y: 1}
+  m_Center: {x: 0, y: -20}
 --- !u!1 &2130643145
 GameObject:
   m_ObjectHideFlags: 0
